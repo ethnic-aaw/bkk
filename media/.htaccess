@@ -1,0 +1,6 @@
+# Cegah eksekusi skrip di folder gambar (Apache)
+<IfModule mod_authz_core.c>
+  <FilesMatch "\.(php|phtml|phar|html?)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>

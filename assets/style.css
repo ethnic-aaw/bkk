@@ -1,0 +1,17 @@
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:focus-visible{outline:3px solid #F5B335;outline-offset:2px}
+.tree ul{display:flex;justify-content:center;padding-top:22px;position:relative}
+.tree li{list-style:none;position:relative;padding:22px 6px 0;text-align:center}
+.tree li::before,.tree li::after{content:'';position:absolute;top:0;right:50%;width:50%;height:22px;border-top:2px solid #0E2F3A55}
+.tree li::after{right:auto;left:50%;border-left:2px solid #0E2F3A55}
+.tree li:only-child::before,.tree li:only-child::after{display:none}
+.tree li:only-child{padding-top:0}
+.tree li:first-child::before,.tree li:last-child::after{border:0}
+.tree li:last-child::before{border-right:2px solid #0E2F3A55;border-radius:0 6px 0 0}
+.tree li:first-child::after{border-radius:6px 0 0 0}
+.tree ul ul::before{content:'';position:absolute;top:0;left:50%;border-left:2px solid #0E2F3A55;height:22px}
+.tree .node{display:inline-block;min-width:150px;max-width:190px;background:#fff;border:1px solid #0E2F3A22;border-radius:10px;padding:10px 12px;font-size:13px}
+.tree .node b{display:block}.tree .node span{color:#0E2F3A99;font-size:12px}
+.tree>ul>li>.node{background:#0E2F3A;color:#fff}.tree>ul>li>.node span{color:#ffffffaa}
+dialog::backdrop{background:#0E2F3A99}

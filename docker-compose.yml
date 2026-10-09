@@ -1,0 +1,12 @@
+services:
+  bkk:
+    build: .
+    image: web-bkk
+    ports:
+      - "8080:80"
+    # Simpan data agar tidak hilang saat container dibuat ulang
+    volumes:
+      - ./data:/var/www/html/data
+      - ./uploads:/var/www/html/uploads
+      - ./media:/var/www/html/media
+    restart: unless-stopped

@@ -5,3 +5,10 @@ WEB BKK - cara pakai (Laragon)
 4. Ganti semua data contoh lewat admin. Folder data/ dan uploads/ sudah dilindungi .htaccess (Apache).
    Jika memakai Nginx, blokir akses langsung ke kedua folder tersebut.
 5. Tailwind dan font dimuat dari CDN, jadi komputer perlu internet saat menjalankan situs.
+
+Menjalankan dengan Docker
+1. Pastikan Docker Desktop terpasang dan menyala.
+2. Di folder ini jalankan: docker compose up --build
+3. Buka http://localhost:8080  (admin: http://localhost:8080/admin, admin/admin123)
+4. Data tersimpan di folder data/, uploads/, dan media/ pada komputer (bind mount), jadi tidak hilang saat container dimatikan.
+5. Ganti port 8080 di docker-compose.yml bila sudah dipakai aplikasi lain.
